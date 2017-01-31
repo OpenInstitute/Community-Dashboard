@@ -1,0 +1,414 @@
+@charset "utf-8";
+
+@media screen, projection
+{
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+
+
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	margin:		0; 
+	padding: 		0;
+}
+
+
+	
+.sf-menu ul li {
+	width:			100%;
+}
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+	zoom: 1;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative; 
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0px;
+	top:			46px; /* match top ul list item height */
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	top:			0;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	top:			0;
+}
+
+
+
+
+.sf-menu ul,
+.sf-menu ul ul {
+	width: 180px;
+}
+
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul,
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:179px; 		
+}
+
+.sf-menu-right li:last-child ul,
+.sf-menu li.nav-right ul { right: 0px !important; left: auto !important; }
+.sf-menu li ul li.nav-right ul { right: 179px !important; left: auto !important; }
+
+/* ============================================================================================= */
+/* DEMO SKIN 
+/* --------------------------------------------------------------------------------------------- */
+
+.sf-menu {
+	width: auto; height:46px; border:0px solid #f00; 
+	float:			left;
+	margin-bottom:	0em;
+}
+.sf-menu-right { float:right; }
+
+.sf-menu a {
+	border-left:	0px solid #FFB680;
+	padding: 		0px 15px 0 15px;
+	margin: 0;
+	text-decoration:none;
+	line-height:	46px;
+	height: 		46px;
+	text-align:		left !important;
+	font-weight:	normal;
+	font-size:		105%;
+	font-weight:	500;	
+	text-transform: capitalize;
+}
+.sf-menu li a i[class*="fa-"] {  font-size: 12px; }
+
+* html .sf-menu a { padding: 0px; zoom: 1; }
+
+
+
+
+/*** arrows **/
+.sf-menu a.sf-with-ul {
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+	padding-right: 22px;	
+}
+
+.sf-menu li li,
+.sf-menu li li.current {
+	border-bottom:0px dotted  #d9d9d9 !important;
+	display:block;
+}
+
+.sf-menu li ul li a,
+.sf-menu li li a {
+	border: none;
+	line-height: 1.8;
+	height: auto !important; 
+	padding: 0px 5px 0px 15px;
+	margin:0px;
+	text-transform:none !important;
+	text-align:left !important;
+	text-indent: 0px;
+	font-weight:normal;
+	display:block;
+	font-size: 100%;
+	letter-spacing: normal;
+	color: #2C3E50;
+}
+
+
+.sf-menu a, .sf-menu a:visited { color: #FFF; }
+.sf-menu li li a, .sf-menu li li a:visited { color: #2C3E50; }
+
+
+
+.sf-menu { background: /*#428BCA*/;}
+
+.sf-menu ul {
+	z-index: 1000;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 0;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+}
+
+.sf-menu li.current,
+.sf-menu li.sfHover, .sf-menu li:hover{
+	background: #2C3E50;
+}
+.sf-menu li li.current,
+.sf-menu li li.sfHover, .sf-menu li li:hover,
+.sf-menu li li a:hover {
+	background: #DDD;
+}
+
+
+.sf-menu li li.dropdown-header{display:block;padding:3px 15px;line-height:1.428571429; font-variant:small-caps; font-weight:bold; font-size:105%; white-space:nowrap; color: #CCC;}
+.sf-menu li li.separator { height:1px;margin:2px 0;overflow:hidden;background-color:#e5e5e5}
+
+
+.sf-menu .divider-vertical {
+    border-left: 1px solid #d6d6d6;
+    height: 30px;
+    margin: 5px 0px;
+	display: none;
+}
+
+
+
+ul.sf-menu li, 
+/*ul.sf-menu li ul,*/ 
+ul.sf-menu li ul li { margin:0; padding:0;}
+
+
+.sf-menu li, .sf-menu li ul li, .sf-menu li li li, .sf-menu  a  { z-index: 102 !important; }
+
+/*.sf-menu ul li { border-width: 0 0 1px 0 !important; }*/
+
+
+
+/*-------------------------------------------------------------------------------------------------------
+@ SITE FONT RESIZE BUTTONS
+-------------------------------------------------------------------------------------------------------*/
+#fontsize { margin:0; padding:0;border-left: 1px solid rgba(255,255,255,0.2);}
+#fontsize a{ border: 0px solid #ccc; padding: 0px 5px; text-decoration: none; /*font-size:110%; */font-weight: bold; display:inline-block; }
+#fontsize a:hover{ background: #c62828; color: #fff; }
+
+
+li.fontsize a{ font-weight: bold !important; float:left; padding-left:7px !important; padding-right:7px !important;}
+li.fontsize a.fs-one { /*border-left: 1px dotted #FFB680;*/}
+
+
+
+/* ============================================================================================= */
+/* @begin :: NAV_SF-MENU - DROP DOWN ARROWS (for all except IE7)
+/* --------------------------------------------------------------------------------------------- */
+
+ul.sf-arrows .sf-with-ul {
+	padding-right: 12px;
+	*padding-right: 12px; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+
+ul.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 55%;
+	/*bottom:0px;*/
+	right: 5px;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 4px solid transparent;
+	border-top-color: #FFF; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba(255,255,255,.5);
+}
+
+ul.sf-arrows > li > .sf-with-ul:focus:after,
+ul.sf-arrows > li:hover > .sf-with-ul:after,
+ul.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: #FFF; /* IE8 fallback colour */
+}
+
+/* styling for right-facing arrows */
+ul.sf-arrows ul .sf-with-ul:after {
+	top: 55%;
+	right: 5px;
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #2C3E50; 
+	border-left-color: rgba(0,0,0,.5);
+}
+ul.sf-arrows ul li > .sf-with-ul:focus:after,
+ul.sf-arrows ul li:hover > .sf-with-ul:after,
+ul.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: #2C3E50;
+}
+
+ul.sf-arrows li.current a.sf-with-ul:after,
+ul.sf-arrows a.current.sf-with-ul:after {
+	border-top-color: #fff;
+}
+
+ul.sf-arrows li.current ul li > .sf-with-ul:after {
+	border-color: transparent;
+	border-left-color: #FFF;
+}
+
+
+
+
+
+
+
+/* ============================================================================================= */
+/* @begin :: NAV_CRUMBS
+/* --------------------------------------------------------------------------------------------- */
+
+.breadcrumb {
+	background-color: #FFE9CC/*#FFF9D8*/ ;
+	border:solid 1px #F2EBA2 ;
+	border-width:0px 1px 1px;
+	border-radius:0px 0px 3px 3px;
+	margin-bottom: 0px;	
+	color: #999;
+	font-size: 90%;
+	line-height: 1.5;
+}
+.breadcrumb a {display: inline-block; padding-left:0px; padding-right: 3px; text-decoration: none !important;}
+.breadcrumb a.last {}
+.breadcrumb a:hover {text-decoration:underline;}
+.breadcrumbpadd {padding: 8px 12px; border:0px solid;}
+
+
+/* ============================================================================================= */
+/* @begin :: NAV_SIDE
+/* --------------------------------------------------------------------------------------------- */
+
+.nav_side, 
+.nav_side li { list-style:none; padding:0; margin:0;}
+.nav_side { padding: 0px 0px 10px 0; }
+.nav_side li { border-bottom: 1px dotted #e5e5e5; padding-left:0px;  }
+.nav_side a { text-decoration:none; font-size: 95%; text-transform:uppercase; color: #333; display:block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; background: none; padding-left: 3px; }
+.nav_side a:hover { white-space:pre-line; overflow:visible; background: #F5F5F5; }
+
+/*.nav_side li:hover {background:#F5CE69;}*/
+.nav_side li.current {background:#E5F4EF;}
+.nav_side li.current a { white-space:pre-line; overflow:visible; }
+.nav_side li.separator { height:3px;margin:0px 0;overflow:hidden;background-color:#e5e5e5}
+
+.nav_side.nav_profile a { text-transform: capitalize; font-size:inherit }
+.nav_side li ul { margin-bottom:0; padding-bottom:0;}
+
+#left-nav{ /*font-weight:bold;*/ }
+#left-nav a{ text-decoration:none; }
+#left-nav ul { margin:0; padding:0; list-style:none; }
+#left-nav li { list-style:none; vertical-align:top; margin:0; padding: 0px 0px 0px 8px; }
+
+#left-nav ul li a { font-size:105%; /*color:#669933;*/  }
+#left-nav ul li { border-bottom: 1px dashed #D7C5AC; }
+
+#left-nav ul li a.current,
+#left-nav ul li.expanded a ,
+#left-nav ul li ul li.selected a { color:#990000; }
+
+#left-nav ul li ul li a { color:#D7C5AC; font-size:97.75%;/**/ font-weight:normal;  }
+#left-nav ul li ul li { border-bottom:0px; border-top: 1px dotted #d7c5ac;  line-height:1.5;/**/  }
+
+.cat-items li a { display:block; position:relative; width:100%; line-height:30px;}
+.cat-items li a .cat-text {display:block; width:auto; border-right:36px solid #ADAB29; padding-right:10px; /*font-size:13px;*/ }
+.cat-items li a .cat-count {display:inline-block; width:35px; position:absolute; right:0px; top:0px; border:0px solid; text-align:center; color:#FFF; font-weight:normal; /*font-size:13px;*/ }
+
+.cat-items li a .cat-text.bg4 { border-color: rgb(227,6,19);}
+.cat-items li a .cat-text.bg3 { border-color: #009900;}
+.cat-items li a .cat-text.bg2 { border-color: #000;}
+
+/* ============================================================================================= */
+/* @begin :: NAV_DOWNLOADS_SIDE
+/* --------------------------------------------------------------------------------------------- */
+
+.nav_dloads,
+.cont_dloads {	border:0px solid #000; margin: 0px; padding: 0px 5px 0px 0;  }
+.nav_dloads a  { display:block; padding-top:0px; padding-bottom: 3px; line-height: 150%; }
+.nav_dloads li { border: none;  border-bottom:1px dotted #D2D2D2; padding:0; list-style: none; margin:0 0 3px;}
+
+
+.cont_dloads li {	margin:0 0 10px; list-style: none;  }
+.cont_dloads li a { padding-top:2px !important; padding-bottom:3px !important; font-size: 15px;  }
+
+.nav_dloads > li:last-child,
+.cont_dloads > li:last-child { border-bottom: none; }
+
+
+
+
+/* ============================================================================================= */
+/* @begin :: NAV_COLS_FOOT
+/* --------------------------------------------------------------------------------------------- */
+
+.nav_foot_col { display: inline-block; float:left;/**/ border:0px solid; width: 50%;/**/ }
+/*.nav_foot_col ul li a { color: #775B20; }*/
+.nav_foot_col ul { border:0px solid #F00 !important;}
+.nav_foot_col ul li { /*float:left; width: 50%; display:inline-block;*/border:0px solid #ccc !important;}
+
+/*.wrap_footer_guts a { color: #775B20; }*/
+h5.foot_col_header { font-size:17px; font-weight: 100 !important; color:  #BC4B10;}
+
+
+
+/* ============================================================================================= */
+/* @begin :: NAV_FOOT - LINE
+/* --------------------------------------------------------------------------------------------- */
+
+.nav_foot_sml { padding-right: 0px;}
+#nav_foot { float:right; margin:0 }
+#nav_foot, #nav_foot li { list-style:none;  list-style-type:none;}
+#nav_foot li { position: relative;float: left; padding:0; margin:0; }
+#nav_foot li a
+{ 	display: block;
+	background: none; 
+	padding: 2px 8px;
+	border-right: 0px solid #999999;
+	text-decoration: none;
+	margin:0;
+	color:#FFF;
+}
+
+#nav_foot li a:hover
+{	color: #FC0;
+}
+
+#nav_foot > li:last-child a 
+{	padding-right: 0px; border: none;
+}
+
+
+
+
+
+/* ============================================================================================= */
+/* @begin :: BULLETS
+/* --------------------------------------------------------------------------------------------- */
+
+ul.bul-gry, ul.bul-gry.dark { border-top:0px solid #d7d7d7; margin:0; padding:0px;  }
+ul.bul-gry li,
+ul.bul-gry.dark li { list-style: none; list-style-image:url(../image/icons/arrow_blue.gif); border-bottom:0px dotted #d7d7d7;padding:0; margin:0; vertical-align:top; list-style-position:inside;}
+ul.bul-gry li a, ul.bul-gry.dark li a {}
+ul.bul-gry li a.current { /*list-style:none; margin-left:-20px; padding-bottom: 15px; border-bottom: none; list-style-position:outside*/ color: #C24D00; }
+ul.bul-gry.dark li { list-style: none; border-bottom:1px dotted #d7d7d7;padding:0; 
+/*margin:0 10px 0 0;*/ vertical-align:top; list-style-position:inside; 
+background: url(../image/icons/bullet.gif) no-repeat 0px 9px; padding: 2px 15px 2px 8px;}
+
+ul.bul-gry.dark li a { line-height:1;  text-decoration:none;}
+
+
+
+
+
+}

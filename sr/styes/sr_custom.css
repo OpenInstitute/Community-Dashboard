@@ -1,0 +1,31 @@
+.feed-avatar {
+    background: url(../images/no_avatar.png) no-repeat #535c6a; background-size: contain;
+    border-radius: 50%;
+    height: 39px;    
+    overflow: hidden;
+    position: absolute;
+    top: 12px;
+	left: 19px;
+    width: 39px;
+}
+
+.feed-avatar.feed-avatar-Y img {
+    background-color: #fff;
+}
+.feed-avatar img {
+    width: 39px;
+    height: 39px;
+}
+
+.feed-block.feed-com-block-read {
+    background-color: transparent;
+    -webkit-transition: background-color 1s linear 1s;
+    transition: background-color 1s linear 1s;
+}
+.feed-block {
+    border-bottom: 2px solid #fff;
+    min-height: 40px;
+    overflow: hidden;
+    padding: 14px 25px 15px 72px;
+    position: relative;
+}
